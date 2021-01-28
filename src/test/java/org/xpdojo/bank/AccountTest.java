@@ -19,4 +19,11 @@ public class AccountTest {
         assertThat(account.balance()).isEqualTo(100);
     }
 
+    @Test
+    public void depositMultipleAmountsIncreasesBalance() {
+        Account account = new Account();
+        account.deposit(100);
+        account.deposit(200);
+        assertThat(account.balance()).isEqualTo(300);
+    }
 }
